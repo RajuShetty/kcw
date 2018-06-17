@@ -2,8 +2,8 @@
 
     <!-- ad mob credential -->
     <string name="app_ad_id">ca-app-pub-6382099871444261~9778932425</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="interstitial_ad_unit_id">ca-app-pub-6382099871444261/4249427662</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6251426836814427/2406973040</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-6251426836814427/9682827832</string>
 
     <!--common string resources-->
     <string name="app_name">Christian Wallpapers</string>
