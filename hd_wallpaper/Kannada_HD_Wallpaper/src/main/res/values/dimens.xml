@@ -1,0 +1,85 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="pad_margin_1dp">1dp</dimen>
+    <dimen name="pad_margin_2dp">2dp</dimen>
+    <dimen name="pad_margin_3dp">3dp</dimen>
+    <dimen name="pad_margin_4dp">4dp</dimen>
+    <dimen name="pad_margin_5dp">5dp</dimen>
+    <dimen name="pad_margin_7dp">7dp</dimen>
+    <dimen name="pad_margin_10dp">10dp</dimen>
+    <dimen name="pad_margin_15dp">15dp</dimen>
+    <dimen name="pad_margin_20dp">20dp</dimen>
+    <dimen name="pad_margin_25dp">25dp</dimen>
+    <dimen name="pad_margin_30dp">30dp</dimen>
+    <dimen name="pad_margin_35dp">35dp</dimen>
+    <dimen name="pad_margin_40dp">40dp</dimen>
+    <dimen name="pad_margin_100dp">100dp</dimen>
+
+    // height-width
+    <dimen name="height_width_0dp">0dp</dimen>
+    <dimen name="height_width_15dp">15dp</dimen>
+    <dimen name="height_width_20dp">20dp</dimen>
+    <dimen name="height_width_25dp">25dp</dimen>
+    <dimen name="height_width_30dp">30dp</dimen>
+    <dimen name="height_width_35dp">35dp</dimen>
+    <dimen name="height_width_40dp">40dp</dimen>
+    <dimen name="height_width_50dp">50dp</dimen>
+    <dimen name="height_width_60dp">60dp</dimen>
+    <dimen name="height_width_70dp">70dp</dimen>
+    <dimen name="height_width_80dp">80dp</dimen>
+    <dimen name="height_width_100dp">100dp</dimen>
+    <dimen name="height_width_250dp">250dp</dimen>
+
+    // specific height-width
+    <dimen name="pb_height_width">40dp</dimen>
+    // Progress bar
+
+    // text size
+    <dimen name="txt_size_6sp">6sp</dimen>
+    <dimen name="txt_size_12sp">12sp</dimen>
+    <dimen name="txt_size_14sp">14sp</dimen>
+    <dimen name="txt_size_16sp">16sp</dimen>
+    <dimen name="txt_size_18sp">18sp</dimen>
+    <dimen name="txt_size_20sp">20sp</dimen>
+    <dimen name="txt_size_22sp">22sp</dimen>
+    <dimen name="txt_size_25sp">25sp</dimen>
+
+    <!--navigation drawer dimen resources-->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">220dp</dimen>
+    <dimen name="nav_profile_photo_width">75dp</dimen>
+    <dimen name="nav_profile_photo_height">75dp</dimen>
+
+    <!--custom toast-->
+    <dimen name="toast_txt_padding">5dp</dimen>
+
+    <!--custom popup window-->
+    <dimen name="window_padding">30dp</dimen>
+    <dimen name="window_msg_padding">10dp</dimen>
+
+    <!--Card view-->
+    <dimen name="card_corner_radius">5dp</dimen>
+    <dimen name="card_elevation">1dp</dimen>
+
+    <!-- homepage items-->
+    <dimen name="height_home_search_bar">45dp</dimen>
+    <dimen name="height_view_pager">180dp</dimen>
+
+    <dimen name="height_details_page">200dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_right_margin">10dp</dimen>
+    <dimen name="activity_left_margin">10dp</dimen>
+    <dimen name="icon_width">23dip</dimen>
+    <dimen name="icon_height">23dip</dimen>
+    <dimen name="icon_padding">4dp</dimen>
+    <dimen name="card_height">180dip</dimen>
+    <dimen name="item_height">220dip</dimen>
+    <dimen name="text_size">18sp</dimen>
+
+
+</resources>

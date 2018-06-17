@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_height"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="4dp">
+
+    <ImageView
+        android:id="@+id/ivAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <com.mcc.wallpaper.view.MontserratTextView
+        android:id="@+id/tvAlbumName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#7b000000"
+        android:padding="@dimen/pad_margin_20dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size_12sp" />
+</RelativeLayout>

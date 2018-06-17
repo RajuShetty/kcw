@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF3F80</color>
+
+    <!--Common colors-->
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#34439B</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="redHover">#f74747</color>
+    <color name="green">#008000</color>
+    <color name="transparent50black">#CC000000</color>
+    <color name="transparent10black">#1A000000</color>
+    <color name="transparent50White">#88AAAAAA</color>
+    <color name="fullTransparent">#00000000</color>
+    <color name="btn_back_light">#959699</color>
+    <color name="btn_back_dark">#6F7073</color>
+    <color name="grey_light">#D3D3D3</color>
+    <color name="list_background_color">#F5F2F4</color>
+    <color name="imgPlaceholder">#ffffff</color>
+    <color name="drawer_header_text_color">#a2a7c1</color>
+    <color name="whitish_background_color">#f7f6fb</color>
+
+    <color name="toolbar_boarder">#e5e6ea</color>
+    <color name="textColor">#9B53FE</color>
+    <color name="detailsToolbar">#55000000</color>
+    <color name="counterBoarder">#C7CFF6</color>
+    <color name="detailsBoarder">#D5D8E1</color>
+    <color name="transparent_white">#73ffffff</color>
+    <color name="transparent_black">#96000000</color>
+    <color name="transparent_black_category">#45000000</color>
+
+    <color name="fabPressedColor">#82000000</color>
+    <color name="fab_backgroung_color">#ff5114</color>
+    <color name="page_bg">#F7F5F6</color>
+</resources>

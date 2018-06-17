@@ -1,0 +1,82 @@
+<resources>
+
+    <!-- ad mob credential -->
+    <string name="app_ad_id">ca-app-pub-6382099871444261~9778932425</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-6382099871444261/4249427662</string>
+
+    <!--common string resources-->
+    <string name="app_name">Christian Wallpapers</string>
+    <string name="search_hint">Search Wallpaper</string>
+    <string name="server_error">No response from server!</string>
+    <string name="ok">OK</string>
+
+    <string name="fileprovider">com.mcc.wallpaper.fileprovider</string>
+
+    <!-- terms and conditions, privacy policy and faq url -->
+    <string name="terms_url">https://docs.google.com/document/d/e/2PACX-1vTM3_XR_tVLPFP5-Q5maOhZnKYfjVxSriWE3zi7rvr28kl7myJYcKLvWDdfkcJAxKvLNzjU_nTn5W4-/pub</string>
+    <string name="privacy_url">https://docs.google.com/document/d/e/2PACX-1vTlJfsvjpSv09lid9lvf25YGZQQiRfdaxlCohDwnLKoW1Owk7SyAPDlUyV9YWBvWJOdWDf8oEOl7p-F/pub</string>
+    <string name="faq_url">https://docs.google.com/document/d/e/2PACX-1vQZQg-db5an_DJy6WZMzPOfKCLJy1tu_QbvEKKJfs0K7tBiOdHzxegsM6b9N0i-Ip0hRwxDZrKD4HuK/pub</string>
+
+    <!--Drawer menu string resources-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="menu_favorite">Favorites</string>
+    <string name="menu_setting">Settings</string>
+
+    <string name="empty_result">No data!</string>
+    <string name="no_internet">No internet!</string>
+    <string name="connect">Connect</string>
+    <string name="share_text">Install best wallpaper application from:</string>
+    <string name="share_wallpaper_title">Share Wallpaper</string>
+    <string name="text_my_photos">My Photos</string>
+
+    <!--fullscreen wallpaper texts-->
+    <string name="wallpaper_saved">Wallpaper Saved</string>
+    <string name="wallpaper_set">Wallpaper Set</string>
+    <string name="added_to_favorites">Added to favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+    <string name="wallpaper_not_loaded">Wallpaper is not loaded</string>
+    <string name="loading_failed">Loading failed</string>
+
+    <!--permission explanations-->
+    <string name="storage_permission_required_for_albums">Storage permission is required to view your phone albums!</string>
+    <string name="storage_permission_required_to_download">Storage permission is required to download wallpapers!</string>
+
+    <!--tab layout titles-->
+    <string name="title_category">Category</string>
+    <string name="title_featured">Featured</string>
+    <string name="title_gif">GIFs</string>
+
+    <!--activity titles-->
+    <string name="title_favorite">Favorites</string>
+    <string name="title_albums">Albums</string>
+
+    <!-- Settings activity -->
+    <string name="pref_notification_title">Notification</string>
+    <string name="pref_notification_summary">Turn on/off notification</string>
+
+    <string name="rate">Rate App</string>
+    <string name="share">Share</string>
+    <string name="others">Others</string>
+
+    <string name="empty_favourite_list">Your favourite list is empty</string>
+    <string name="empty_album_list">Your album list is empty</string>
+
+    <string name="terms">Terms and Conditions</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="faq">FAQ</string>
+    <string name="text_favorite">Favorite</string>
+    <string name="text_more">More</string>
+
+    <!--Notification-->
+    <string name="notifications">Notifications</string>
+    <string name="notification_title">Notification title</string>
+    <string name="notification_details">Notification details</string>
+    <string name="no_notification">No notification</string>
+    <string name="placeholder">..</string>
+    <string name="title">Title</string>
+    <string name="details">Details</string>
+
+</resources>
