@@ -10,7 +10,7 @@ import com.mcc.wallpaper.fragment.FavoriteListFragment;
 
 public class FavoritePagerAdapter extends FragmentPagerAdapter {
 
-    private static final int ITEM_COUNT = 2;
+    private static final int ITEM_COUNT = 1;
 
     public FavoritePagerAdapter(FragmentManager fm) {
         super(fm);
@@ -21,8 +21,7 @@ public class FavoritePagerAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0:
                 return FavoriteListFragment.getInstance(AppConstants.TYPE_WALLPAPER);
-            case 1:
-                return FavoriteListFragment.getInstance(AppConstants.TYPE_GIF);
+
             default:
                 return null;
         }
@@ -39,8 +38,7 @@ public class FavoritePagerAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0:
                 return AppConstants.TITLE_WALLPAPER;
-            case 1:
-                return AppConstants.TITLE_GIF;
+
             default:
                 return null;
         }

@@ -178,7 +178,7 @@ public class PhotoSliderFragment extends BaseFragment {
         @Override
         protected void onPostExecute(Void aVoid) {
             hideProgressBar();
-            Toast.makeText(mContext, getString(R.string.wallpaper_set), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(mContext, getString(R.string.wallpaper_set), Toast.LENGTH_SHORT).show();
         }
     }
 

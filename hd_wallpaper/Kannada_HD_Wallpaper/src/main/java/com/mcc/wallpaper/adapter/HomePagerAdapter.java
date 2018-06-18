@@ -14,7 +14,7 @@ import com.mcc.wallpaper.fragment.FeaturedFragment;
 public class HomePagerAdapter extends FragmentPagerAdapter {
 
     private Context context;
-    private static final int ITEM_COUNT = 3;
+    private static final int ITEM_COUNT = 2;
 
     public HomePagerAdapter(FragmentManager fm, Context context) {
         super(fm);
@@ -28,8 +28,6 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
                 return new CategoryFragment();
             case 1:
                 return new FeaturedFragment();
-            case 2:
-                return new GifsFragment();
             default:
                 return null;
         }
@@ -48,8 +46,6 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
                 return context.getString(R.string.title_category);
             case 1:
                 return context.getString(R.string.title_featured);
-            case 2:
-                return context.getString(R.string.title_gif);
             default:
                 return null;
         }

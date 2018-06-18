@@ -106,12 +106,6 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             AppUtility.rateThisApp(mActivity); // this feature will only work after publish the app
         } else if (id == R.id.action_settings) {
             ActivityUtils.getInstance().invokeActivity(mActivity, SettingsActivity.class, false);
-        } else if (id == R.id.terms_conditions) {
-            AppUtility.invokeBrowser(mActivity, getResources().getString(R.string.terms_url));
-        } else if (id == R.id.privacy_policy) {
-            AppUtility.invokeBrowser(mActivity, getResources().getString(R.string.privacy_url));
-        } else if (id == R.id.faq) {
-            AppUtility.invokeBrowser(mActivity, getResources().getString(R.string.faq_url));
         }
 
         if (mDrawerLayout != null && mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
