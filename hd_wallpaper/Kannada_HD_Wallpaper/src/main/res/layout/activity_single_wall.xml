@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mcc.wallpaper.activity.SingleWallActivity">
+    tools:context="com.kannadachristianwallpapers.app.activity.SingleWallActivity">
 
-    <com.mcc.wallpaper.view.TouchImageView
+    <com.kannadachristianwallpapers.app.view.TouchImageView
         android:id="@+id/ivPng"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

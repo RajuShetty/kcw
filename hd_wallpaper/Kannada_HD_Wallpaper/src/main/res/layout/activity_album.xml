@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mcc.wallpaper.activity.AlbumActivity">
+    tools:context="com.kannadachristianwallpapers.app.activity.AlbumActivity">
 
     <include
         android:id="@+id/toolbarTop"

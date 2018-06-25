@@ -14,7 +14,7 @@
         android:contentDescription="@null"
         android:scaleType="centerCrop" />
 
-    <com.mcc.wallpaper.view.MontserratTextView
+    <com.kannadachristianwallpapers.app.view.MontserratTextView
         android:id="@+id/tvAlbumName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

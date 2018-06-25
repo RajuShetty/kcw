@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:showIn="@layout/activity_notification">
 
     <LinearLayout
@@ -28,9 +29,16 @@
         android:layout_centerInParent="true"
         android:text="@string/no_notification" />
 
-    <include
+<!--    <include
         android:id="@+id/adView"
-        layout="@layout/content_banner_ad"
-        android:layout_above="@+id/adView" />
+        layout="@layout/content_banner_ad" />-->
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
 
 </RelativeLayout>

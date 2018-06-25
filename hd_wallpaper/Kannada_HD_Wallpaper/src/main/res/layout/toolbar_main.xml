@@ -34,7 +34,7 @@
                     android:layout_toLeftOf="@+id/ivSearchIcon"
                     android:layout_toStartOf="@+id/ivSearchIcon">
 
-                    <com.mcc.wallpaper.view.RobotoTextView
+                    <com.kannadachristianwallpapers.app.view.RobotoTextView
                         android:id="@+id/toolbarTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

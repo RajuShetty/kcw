@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mcc.wallpaper">
+    package="com.kannadachristianwallpapers.app">
 
     <!-- internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <!-- save wallpaper and access camera photos permissions -->
+    <!-- skannadachristianwallpapersaper and access camera photos permissions -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <!-- set wallpaper permission -->
+    <!-- kannadachristianwallpapersaper permission -->
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
     <application
-        android:name=".app.MyApplication"
+        android:name="com.kannadachristianwallpapers.app.app.MyApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.MainActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
         <activity
-            android:name=".activity.CategoryDetailsActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.CategoryDetailsActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:theme="@style/DetailsActivityTheme" />
         <activity
-            android:name=".activity.FullscreenActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.FullscreenActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
         <activity
-            android:name=".activity.PhotoFullscreenActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.PhotoFullscreenActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="" />
         <activity
-            android:name=".activity.SettingsActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.SettingsActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/menu_setting" />
         <activity
-            android:name=".activity.PhotoListActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.PhotoListActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/text_my_photos"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".activity.SplashActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.SplashActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,30 +53,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.FavoriteActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.FavoriteActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/title_favorite" />
         <activity
-            android:name=".activity.SearchActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.AboutActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/title_about" />
+        <activity
+            android:name="com.kannadachristianwallpapers.app.activity.SearchActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
         <activity
-            android:name=".activity.NotificationActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.NotificationActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
         <activity
-            android:name=".activity.NotificationContentActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.NotificationContentActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
         <activity
-            android:name=".activity.AlbumActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.AlbumActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/title_albums"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".activity.SingleWallActivity"
+            android:name="com.kannadachristianwallpapers.app.activity.SingleWallActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.mcc.wallpaper.fileprovider"
+            android:authorities="com.kannadachristianwallpapers.app.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -88,7 +92,7 @@
 
 
         <!-- start block -->
-        <service android:name=".notification.MyFirebaseMessagingService">
+        <service android:name="com.kannadachristianwallpapers.app.notification.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

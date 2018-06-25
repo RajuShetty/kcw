@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="@dimen/pad_margin_5dp"
-    tools:context="com.mcc.wallpaper.fragment.CategoryFragment">
+    tools:context="com.kannadachristianwallpapers.app.fragment.CategoryFragment">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"

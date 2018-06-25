@@ -4,7 +4,7 @@
     android:id="@+id/splashBody"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mcc.wallpaper.activity.SplashActivity">
+    tools:context="com.kannadachristianwallpapers.app.activity.SplashActivity">
 
     <ImageView
         android:id="@+id/ivSplashBg"

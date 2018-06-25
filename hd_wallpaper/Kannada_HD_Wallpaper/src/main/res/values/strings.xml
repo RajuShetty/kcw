@@ -1,9 +1,10 @@
 <resources>
 
     <!-- ad mob credential -->
-    <string name="app_ad_id">ca-app-pub-6382099871444261~9778932425</string>
+    <string name="app_ad_id">ca-app-pub-6251426836814427~9163953084</string>
     <string name="banner_ad_unit_id">ca-app-pub-6251426836814427/2406973040</string>
     <string name="interstitial_ad_unit_id">ca-app-pub-6251426836814427/9682827832</string>
+    <string name="rewarded_video_ad_unit_id">ca-app-pub-6251426836814427/1566440767</string>
 
     <!--common string resources-->
     <string name="app_name">Christian Wallpapers</string>
@@ -24,6 +25,7 @@
 
     <string name="menu_favorite">Favorites</string>
     <string name="menu_setting">Settings</string>
+    <string name="menu_about">About</string>
 
     <string name="empty_result">No data!</string>
     <string name="no_internet">No internet!</string>
@@ -32,7 +34,7 @@
     <string name="share_wallpaper_title">Share Wallpaper</string>
     <string name="text_my_photos">My Photos</string>
 
-    <!--fullscreen wallpaper texts-->
+    <!--fullscrkannadachristianwallpapersaper texts-->
     <string name="wallpaper_saved">Wallpaper Saved</string>
     <string name="wallpaper_set">Wallpaper Set</string>
     <string name="added_to_favorites">Added to favorites</string>
@@ -51,6 +53,7 @@
 
     <!--activity titles-->
     <string name="title_favorite">Favorites</string>
+    <string name="title_about">About</string>
     <string name="title_albums">Albums</string>
 
     <!-- Settings activity -->
@@ -78,5 +81,14 @@
     <string name="placeholder">..</string>
     <string name="title">Title</string>
     <string name="details">Details</string>
+    
+    // about page
+    <string name="info_us">Carry each other’s burdens, and in this way you will fulfill the 
+        \n LAW OF CHRIST - Galatians 6:2
+        \n We are a team of spiritually elevated believers who got burden from the Lord to help His drudge through our God given talents and software skills.</string>
+
+    <string name="contact_facebook"><a href="https://www.facebook.com/kannadaBible/" >https://www.facebook.com/kannadaBible/</a></string>
+    <string name="contact_youtube"><a href="https://www.youtube.com/channel/UCcGr9NouWVz1svP22--P7gw" >https://www.youtube.com/channel/UCcGr9NouWVz1svP22--P7gw/</a></string>
+    <string name="contact_email"><a href="rajushetty.b@gmail.com" >rajushetty.b@gmail.com</a></string>
 
 </resources>

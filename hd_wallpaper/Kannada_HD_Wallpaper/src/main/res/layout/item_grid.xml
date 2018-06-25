@@ -38,7 +38,7 @@
                 android:contentDescription="@null"
                 android:src="@drawable/ic_view" />
 
-            <com.mcc.wallpaper.view.MontserratTextView
+            <com.kannadachristianwallpapers.app.view.MontserratTextView
                 android:id="@+id/tvViewCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 android:contentDescription="@null"
                 android:src="@drawable/ic_favorite_white" />
 
-            <com.mcc.wallpaper.view.MontserratTextView
+            <com.kannadachristianwallpapers.app.view.MontserratTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/pad_margin_10dp"

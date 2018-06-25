@@ -52,7 +52,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <com.mcc.wallpaper.view.MontserratTextView
+        <com.kannadachristianwallpapers.app.view.MontserratTextView
             android:id="@+id/tvCategoryName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

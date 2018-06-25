@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/pad_margin_5dp"
-    tools:context="com.mcc.wallpaper.fragment.FeaturedFragment">
+    tools:context="com.kannadachristianwallpapers.app.fragment.FeaturedFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvFeatured"
