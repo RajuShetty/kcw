@@ -46,5 +46,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:11.8.0'
     implementation 'com.google.firebase:firebase-ads:11.8.0'
     implementation 'com.google.firebase:firebase-ads:11.8.0'
+
+    implementation 'com.github.medyo:android-about-page:1.2.4'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -3,7 +3,9 @@ package com.kannadachristianwallpapers.app.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -15,12 +17,16 @@ import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.kannadachristianwallpapers.app.R;
 import com.kannadachristianwallpapers.app.utils.AdUtils;
 
-public class AboutActivity extends BaseActivity implements RewardedVideoAdListener {
+import mehdi.sakout.aboutpage.AboutPage;
+import mehdi.sakout.aboutpage.Element;
+
+public class AboutActivity extends BaseActivity {
 
     // variables
     private Context mContext;
     private Activity mActivity;
-    private RewardedVideoAd mRewardedVideoAd;
+
+    private RelativeLayout contentAboutBody;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +36,47 @@ public class AboutActivity extends BaseActivity implements RewardedVideoAdListen
         initView();
         initListener();
 
-        MobileAds.initialize(this, getResources().getString(R.string.rewarded_video_ad_unit_id));
+        // auto load video ad
+        AdUtils.getInstance(mContext).loadRewardedVideoAd(new RewardedVideoAdListener() {
+            @Override
+            public void onRewardedVideoAdLoaded() {
+                AdUtils.getInstance(mContext).showRewardedVideoAd();
+            }
 
-        // Use an activity context to get the rewarded video instance.
-        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
-        mRewardedVideoAd.setRewardedVideoAdListener(this);
+            @Override
+            public void onRewardedVideoAdOpened() {
 
-        loadRewardedVideoAd();
+            }
+
+            @Override
+            public void onRewardedVideoStarted() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdClosed() {
+
+            }
+
+            @Override
+            public void onRewarded(RewardItem rewardItem) {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdLeftApplication() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdFailedToLoad(int i) {
+
+            }
+        });
+
+        // show add on action
+        //AdUtils.getInstance(mContext).loadRewardedVideoAd(null);
+        //AdUtils.getInstance(mContext).showRewardedVideoAd();
     }
 
     private void initVariable() {
@@ -49,8 +89,26 @@ public class AboutActivity extends BaseActivity implements RewardedVideoAdListen
         setContentView(R.layout.activity_about);
 
         initToolbar();
-
         enableBackButton();
+
+        contentAboutBody = findViewById(R.id.contentAboutBody);
+
+        // set about content
+
+        View aboutView = new AboutPage(this)
+                .isRTL(false)
+                .setImage(R.drawable.menu_about)
+                .setDescription(getString(R.string.info_us))
+                .addGroup("Connect with us")
+                .addEmail(getString(R.string.contact_email))
+                //.addWebsite() // set your website link here
+                .addFacebook(getString(R.string.contact_facebook))
+                .addYoutube(getString(R.string.contact_youtube))
+                //.addPlayStore("")
+                .create();
+
+
+        contentAboutBody.addView(aboutView);
     }
 
     private void initListener(){
@@ -62,76 +120,21 @@ public class AboutActivity extends BaseActivity implements RewardedVideoAdListen
         });
     }
 
-
-    private void loadRewardedVideoAd() {
-        mRewardedVideoAd.loadAd(getResources().getString(R.string.rewarded_video_ad_unit_id), new AdRequest.Builder().build());
-    }
-
-    private void showRewardedVideoAd(){
-        if (mRewardedVideoAd.isLoaded()) {
-            mRewardedVideoAd.show();
-        }
-    }
-
-
-    @Override
-    public void onRewarded(RewardItem reward) {
-        //Toast.makeText(this, "onRewarded! currency: " + reward.getType() + "  amount: " + reward.getAmount(), Toast.LENGTH_SHORT).show();
-        // Reward the user.
-    }
-
-    @Override
-    public void onRewardedVideoAdLeftApplication() {
-        //Toast.makeText(this, "onRewardedVideoAdLeftApplication",Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onRewardedVideoAdClosed() {
-        //Toast.makeText(this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onRewardedVideoAdFailedToLoad(int errorCode) {
-        //Toast.makeText(this, "onRewardedVideoAdFailedToLoad", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onRewardedVideoAdLoaded() {
-        //Toast.makeText(this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
-
-        // Show rewarded ad
-        showRewardedVideoAd();
-    }
-
-    @Override
-    public void onRewardedVideoAdOpened() {
-        //Toast.makeText(this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onRewardedVideoStarted() {
-        //Toast.makeText(this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
-    }
-
-
     @Override
     public void onResume() {
-        mRewardedVideoAd.resume(this);
+        AdUtils.getInstance(mContext).getmRewardedVideoAd().resume(mContext);
         super.onResume();
-
-        // load banner ad
-        AdUtils.getInstance(mContext).showBannerAd((AdView) findViewById(R.id.adView));
     }
 
     @Override
     public void onPause() {
-        mRewardedVideoAd.pause(this);
+        AdUtils.getInstance(mContext).getmRewardedVideoAd().pause(mContext);
         super.onPause();
     }
 
     @Override
     public void onDestroy() {
-        mRewardedVideoAd.destroy(this);
+        AdUtils.getInstance(mContext).getmRewardedVideoAd().destroy(mContext);
         super.onDestroy();
     }
 

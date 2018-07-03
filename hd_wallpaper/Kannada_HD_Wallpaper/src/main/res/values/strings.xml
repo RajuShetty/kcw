@@ -4,7 +4,8 @@
     <string name="app_ad_id">ca-app-pub-6251426836814427~9163953084</string>
     <string name="banner_ad_unit_id">ca-app-pub-6251426836814427/2406973040</string>
     <string name="interstitial_ad_unit_id">ca-app-pub-6251426836814427/9682827832</string>
-    <string name="rewarded_video_ad_unit_id">ca-app-pub-6251426836814427/1566440767</string>
+    <!--<string name="rewarded_video_ad_unit_id">ca-app-pub-6251426836814427/1566440767</string>--> // your id
+    <string name="rewarded_video_ad_unit_id">ca-app-pub-3940256099942544/5224354917</string>  // google test id
 
     <!--common string resources-->
     <string name="app_name">Christian Wallpapers</string>
@@ -83,9 +84,8 @@
     <string name="details">Details</string>
     
     // about page
-    <string name="info_us">Carry each other’s burdens, and in this way you will fulfill the 
-        \n LAW OF CHRIST - Galatians 6:2
-        \n We are a team of spiritually elevated believers who got burden from the Lord to help His drudge through our God given talents and software skills.</string>
+    <string name="info_us">Carry each other’s burdens, and in this way you will fulfill the LAW OF CHRIST - Galatians 6:2
+        We are a team of spiritually elevated believers who got burden from the Lord to help His drudge through our God given talents and software skills.</string>
 
     <string name="contact_facebook"><a href="https://www.facebook.com/kannadaBible/" >https://www.facebook.com/kannadaBible/</a></string>
     <string name="contact_youtube"><a href="https://www.youtube.com/channel/UCcGr9NouWVz1svP22--P7gw" >https://www.youtube.com/channel/UCcGr9NouWVz1svP22--P7gw/</a></string>

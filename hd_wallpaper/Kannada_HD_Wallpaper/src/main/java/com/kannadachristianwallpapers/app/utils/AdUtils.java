@@ -2,14 +2,18 @@ package com.kannadachristianwallpapers.app.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.kannadachristianwallpapers.app.R;
 
 /**
@@ -19,6 +23,7 @@ import com.kannadachristianwallpapers.app.R;
 public class AdUtils {
 
     private static AdUtils adUtils;
+    private Context mContext;
 
     private InterstitialAd mInterstitialAd;
     private RewardedVideoAd mRewardedVideoAd;
@@ -26,6 +31,7 @@ public class AdUtils {
     private boolean disableBannerAd = false, disableInterstitialAd = false;
 
     private AdUtils(Context context) {
+        this.mContext = context;
         MobileAds.initialize(context, context.getResources().getString(R.string.app_ad_id));
     }
 
@@ -77,18 +83,17 @@ public class AdUtils {
         return false;
     }
 
-    public void loadRewardedVideoAd(Activity activity) {
+    public void loadRewardedVideoAd(RewardedVideoAdListener rewardedVideoAdListener) {
 
-        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(activity);
-
-        if (!mRewardedVideoAd.isLoaded()){
-            //mRewardedVideoAd.loadAd(activity.getResources().getString(R.string.rewarded_video_ad_unit_id), new AdRequest.Builder().build());
-            mRewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917", new AdRequest.Builder().build());
+        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(mContext);
+        mRewardedVideoAd.loadAd(mContext.getResources().getString(R.string.rewarded_video_ad_unit_id), new AdRequest.Builder().build());
+        if(rewardedVideoAdListener != null) {
+            mRewardedVideoAd.setRewardedVideoAdListener(rewardedVideoAdListener);
         }
+
     }
 
     public void showRewardedVideoAd() {
-
         if (mRewardedVideoAd.isLoaded()) {
             mRewardedVideoAd.show();
         }
@@ -106,5 +111,8 @@ public class AdUtils {
         this.disableInterstitialAd = true;
     }
 
+    public RewardedVideoAd getmRewardedVideoAd() {
+        return mRewardedVideoAd;
+    }
 
 }
