@@ -15,12 +15,15 @@
         android:id="@+id/rvWallpapers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbarTop" />
+        android:layout_below="@+id/toolbarTop"
+        android:layout_above="@+id/adView"/>
 
     <include
         layout="@layout/view_common_loader"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarTop" />
+        android:layout_below="@+id/toolbarTop"
+        android:layout_above="@+id/adView"/>
 
+    <include layout="@layout/content_banner_ad"/>
 </RelativeLayout>

@@ -3,7 +3,9 @@ package com.kannadachristianwallpapers.app.activity;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
+import com.google.android.gms.ads.AdView;
 import com.kannadachristianwallpapers.app.R;
+import com.kannadachristianwallpapers.app.utils.AdUtils;
 
 /**
  * Created by Nasir on 9/7/17.
@@ -41,5 +43,11 @@ public class SettingsActivity extends BaseActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return super.onSupportNavigateUp();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AdUtils.getInstance(getApplicationContext()).showBannerAd((AdView) findViewById(R.id.adView));
     }
 }

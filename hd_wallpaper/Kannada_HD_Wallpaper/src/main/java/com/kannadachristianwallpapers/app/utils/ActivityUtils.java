@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Parcelable;
 
+import com.google.android.gms.ads.AdListener;
 import com.kannadachristianwallpapers.app.activity.CategoryDetailsActivity;
 import com.kannadachristianwallpapers.app.activity.FullscreenActivity;
 import com.kannadachristianwallpapers.app.activity.NotificationContentActivity;
@@ -38,10 +39,27 @@ public class ActivityUtils {
         }
     }
 
-    public void invokeCategoryDetails(Activity activity, Category category) {
-        Intent intent = new Intent(activity, CategoryDetailsActivity.class);
-        intent.putExtra(AppConstants.CATEGORY, category);
-        activity.startActivity(intent);
+    public void invokeCategoryDetails(final Activity activity, final Category category) {
+//        Intent intent = new Intent(activity, CategoryDetailsActivity.class);
+//        intent.putExtra(AppConstants.CATEGORY, category);
+//        activity.startActivity(intent);
+
+
+        if (AdUtils.getInstance(activity).showFullScreenAd()) {
+            AdUtils.getInstance(activity).getInterstitialAd().setAdListener(new AdListener() {
+                @Override
+                public void onAdClosed() {
+                    super.onAdClosed();
+                    Intent intent = new Intent(activity, CategoryDetailsActivity.class);
+                    intent.putExtra(AppConstants.CATEGORY, category);
+                    activity.startActivity(intent);
+                }
+            });
+        } else {
+            Intent intent = new Intent(activity, CategoryDetailsActivity.class);
+            intent.putExtra(AppConstants.CATEGORY, category);
+            activity.startActivity(intent);
+        }
     }
 
     public void invokeAlbumActivity(Activity activity, ArrayList<Album> albums) {

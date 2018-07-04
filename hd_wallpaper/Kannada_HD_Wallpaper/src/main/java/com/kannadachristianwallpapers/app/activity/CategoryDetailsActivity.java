@@ -141,6 +141,7 @@ public class CategoryDetailsActivity extends BaseActivity {
         setContentView(R.layout.activity_category_details);
 
         // set the title
+        if(category!=null)
         setTitle(category.getName());
 
         initToolbar();

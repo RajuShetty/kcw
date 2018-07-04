@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.view.View;
 
+import com.google.android.gms.ads.AdView;
 import com.kannadachristianwallpapers.app.R;
 import com.kannadachristianwallpapers.app.adapter.GridAdapter;
 import com.kannadachristianwallpapers.app.api.http.ApiUtils;
@@ -17,6 +18,7 @@ import com.kannadachristianwallpapers.app.listener.OnItemClickListener;
 import com.kannadachristianwallpapers.app.listener.OnLoadMoreListener;
 import com.kannadachristianwallpapers.app.model.wallpaper.Wallpaper;
 import com.kannadachristianwallpapers.app.utils.ActivityUtils;
+import com.kannadachristianwallpapers.app.utils.AdUtils;
 import com.kannadachristianwallpapers.app.utils.AppUtility;
 
 import java.util.ArrayList;
@@ -217,5 +219,11 @@ public class SearchActivity extends BaseActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return super.onSupportNavigateUp();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AdUtils.getInstance(mContext).showBannerAd((AdView) findViewById(R.id.adView));
     }
 }

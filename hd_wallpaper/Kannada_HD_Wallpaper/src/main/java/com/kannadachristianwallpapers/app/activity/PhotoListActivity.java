@@ -17,12 +17,14 @@ import android.widget.ProgressBar;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.google.android.gms.ads.AdView;
 import com.kannadachristianwallpapers.app.R;
 import com.kannadachristianwallpapers.app.adapter.PhotoAdapter;
 import com.kannadachristianwallpapers.app.data.constant.AppConstants;
 import com.kannadachristianwallpapers.app.listener.OnItemClickListener;
 import com.kannadachristianwallpapers.app.model.others.Album;
 import com.kannadachristianwallpapers.app.utils.ActivityUtils;
+import com.kannadachristianwallpapers.app.utils.AdUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -173,5 +175,11 @@ public class PhotoListActivity extends BaseActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return super.onSupportNavigateUp();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AdUtils.getInstance(mContext).showBannerAd((AdView) findViewById(R.id.adView));
     }
 }

@@ -4,21 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_above="@+id/adView"
-    tools:context="com.kannadachristianwallpapers.app.activity.AlbumActivity">
+    tools:context="com.kannadachristianwallpapers.app.activity.AlbumActivity"
+    android:background="@color/white">
 
     <include
         android:id="@+id/toolbarTop"
         layout="@layout/toolbar" />
 
-    <include
-        android:id="@+id/adView"
-        layout="@layout/content_banner_ad" />
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvAlbums"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarTop" />
+        android:layout_below="@+id/toolbarTop"
+        android:layout_above="@+id/adView"/>
 
     <LinearLayout
         android:id="@+id/noDataView"
@@ -45,4 +45,6 @@
 
     </LinearLayout>
 
+    <include
+        layout="@layout/content_banner_ad" />
 </RelativeLayout>

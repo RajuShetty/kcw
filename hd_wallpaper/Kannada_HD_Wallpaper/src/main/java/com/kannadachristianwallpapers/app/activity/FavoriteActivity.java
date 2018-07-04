@@ -9,8 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdView;
 import com.kannadachristianwallpapers.app.R;
 import com.kannadachristianwallpapers.app.adapter.FavoritePagerAdapter;
+import com.kannadachristianwallpapers.app.utils.AdUtils;
 import com.kannadachristianwallpapers.app.utils.AppUtility;
 
 public class FavoriteActivity extends BaseActivity {
@@ -82,5 +84,11 @@ public class FavoriteActivity extends BaseActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return super.onSupportNavigateUp();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AdUtils.getInstance(mContext).showBannerAd((AdView) findViewById(R.id.adView));
     }
 }

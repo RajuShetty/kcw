@@ -123,6 +123,7 @@ public class AboutActivity extends BaseActivity {
     @Override
     public void onResume() {
         AdUtils.getInstance(mContext).getmRewardedVideoAd().resume(mContext);
+        AdUtils.getInstance(mContext).showBannerAd((AdView) findViewById(R.id.adView));
         super.onResume();
     }
 

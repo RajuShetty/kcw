@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdView;
 import com.kannadachristianwallpapers.app.R;
 import com.kannadachristianwallpapers.app.adapter.HomePagerAdapter;
 import com.kannadachristianwallpapers.app.data.sqlite.NotDbController;
@@ -20,7 +21,7 @@ import com.kannadachristianwallpapers.app.utils.AdUtils;
 import com.kannadachristianwallpapers.app.utils.AppUtility;
 
 
-public class    MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity {
 
     // variables
     private Context mContext;
@@ -125,7 +126,7 @@ public class    MainActivity extends BaseActivity {
             public void onClick(View v) {
 
                 showAdThenActivity(NotificationActivity.class);
-                showAdThenActivity(CategoryDetailsActivity.class);
+                //showAdThenActivity(CategoryDetailsActivity.class);
 
                 /**
                  * if you don't want to show notification then disable
@@ -168,5 +169,7 @@ public class    MainActivity extends BaseActivity {
 
         // load full screen ad
         AdUtils.getInstance(mContext).loadFullScreenAd(mActivity);
+
+        AdUtils.getInstance(mContext).showBannerAd((AdView) findViewById(R.id.adView));
     }
 }
