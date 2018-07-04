@@ -125,6 +125,7 @@ public class    MainActivity extends BaseActivity {
             public void onClick(View v) {
 
                 showAdThenActivity(NotificationActivity.class);
+                showAdThenActivity(CategoryDetailsActivity.class);
 
                 /**
                  * if you don't want to show notification then disable

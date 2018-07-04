@@ -12,6 +12,9 @@ import android.widget.ProgressBar;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.kannadachristianwallpapers.app.R;
 import com.kannadachristianwallpapers.app.adapter.GridAdapter;
 import com.kannadachristianwallpapers.app.api.http.ApiUtils;
@@ -21,6 +24,7 @@ import com.kannadachristianwallpapers.app.listener.OnLoadMoreListener;
 import com.kannadachristianwallpapers.app.model.others.Category;
 import com.kannadachristianwallpapers.app.model.wallpaper.Wallpaper;
 import com.kannadachristianwallpapers.app.utils.ActivityUtils;
+import com.kannadachristianwallpapers.app.utils.AdUtils;
 import com.kannadachristianwallpapers.app.utils.AppUtility;
 import com.kannadachristianwallpapers.app.utils.StringUtil;
 
@@ -66,6 +70,48 @@ public class CategoryDetailsActivity extends BaseActivity {
         loadData(currentPage);
 
         initListener();
+
+        // auto load video ad
+        AdUtils.getInstance(mContext).loadRewardedVideoAd(new RewardedVideoAdListener() {
+            @Override
+            public void onRewardedVideoAdLoaded() {
+                AdUtils.getInstance(mContext).showRewardedVideoAd();
+            }
+
+            @Override
+            public void onRewardedVideoAdOpened() {
+
+            }
+
+            @Override
+            public void onRewardedVideoStarted() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdClosed() {
+
+            }
+
+            @Override
+            public void onRewarded(RewardItem rewardItem) {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdLeftApplication() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdFailedToLoad(int i) {
+
+            }
+        });
+
+        // show add on action
+        //AdUtils.getInstance(mContext).loadRewardedVideoAd(null);
+        //AdUtils.getInstance(mContext).showRewardedVideoAd();
     }
 
     private void initVariable() {
@@ -224,6 +270,8 @@ public class CategoryDetailsActivity extends BaseActivity {
     protected void onResume() {
         gridAdapter.notifyDataSetChanged();
         super.onResume();
+        //load banner ads
+        AdUtils.getInstance(mContext).showBannerAd((AdView) findViewById(R.id.adView));
     }
 
     @Override
@@ -235,4 +283,9 @@ public class CategoryDetailsActivity extends BaseActivity {
         }
         super.onDestroy();
     }
+
+
+
+
 }
+

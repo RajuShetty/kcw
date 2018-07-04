@@ -4,10 +4,10 @@
     <string name="app_ad_id">ca-app-pub-6251426836814427~9163953084</string>
     <string name="banner_ad_unit_id">ca-app-pub-6251426836814427/2406973040</string>
     <string name="interstitial_ad_unit_id">ca-app-pub-6251426836814427/9682827832</string>
-    <!--<string name="rewarded_video_ad_unit_id">ca-app-pub-6251426836814427/1566440767</string>--> // your id
-    <string name="rewarded_video_ad_unit_id">ca-app-pub-3940256099942544/5224354917</string>  // google test id
+    <string name="rewarded_video_ad_unit_id">ca-app-pub-6251426836814427/1566440767</string> // your id
+    <!-- <string name="rewarded_video_ad_unit_id">ca-app-pub-3940256099942544/5224354917</string> --> // google test id
 
-    <!--common string resources-->
+     <!--common string resources-->
     <string name="app_name">Christian Wallpapers</string>
     <string name="search_hint">Search Wallpaper</string>
     <string name="server_error">No response from server!</string>

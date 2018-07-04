@@ -8,12 +8,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.kannadachristianwallpapers.app.R;
 import com.kannadachristianwallpapers.app.adapter.AlbumAdapter;
 import com.kannadachristianwallpapers.app.data.constant.AppConstants;
 import com.kannadachristianwallpapers.app.listener.OnItemClickListener;
 import com.kannadachristianwallpapers.app.model.others.Album;
 import com.kannadachristianwallpapers.app.utils.ActivityUtils;
+import com.kannadachristianwallpapers.app.utils.AdUtils;
 
 import java.util.ArrayList;
 
@@ -41,6 +45,49 @@ public class AlbumActivity extends BaseActivity {
         initView();
         loadAlbums();
         initListener();
+
+        // auto load video ad
+        AdUtils.getInstance(mContext).loadRewardedVideoAd(new RewardedVideoAdListener() {
+            @Override
+            public void onRewardedVideoAdLoaded() {
+                AdUtils.getInstance(mContext).showRewardedVideoAd();
+            }
+
+            @Override
+            public void onRewardedVideoAdOpened() {
+
+            }
+
+            @Override
+            public void onRewardedVideoStarted() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdClosed() {
+
+            }
+
+            @Override
+            public void onRewarded(RewardItem rewardItem) {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdLeftApplication() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdFailedToLoad(int i) {
+
+            }
+        });
+
+        // show add on action
+        //AdUtils.getInstance(mContext).loadRewardedVideoAd(null);
+        //AdUtils.getInstance(mContext).showRewardedVideoAd();
+
     }
 
     private void initVariable() {
@@ -112,4 +159,13 @@ public class AlbumActivity extends BaseActivity {
         }
         super.onDestroy();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // load banner ad
+        AdUtils.getInstance(mContext).showBannerAd((AdView) findViewById(R.id.adView));
+
+    }
 }
+
