@@ -13,7 +13,7 @@
     <string name="server_error">No response from server!</string>
     <string name="ok">OK</string>
 
-    <string name="fileprovider">com.mcc.wallpaper.fileprovider</string>
+    <string name="fileprovider">com.kannadachristianwallpapers.app.fileprovider</string>
 
     <!-- terms and conditions, privacy policy and faq url -->
     <string name="terms_url">https://docs.google.com/document/d/e/2PACX-1vTM3_XR_tVLPFP5-Q5maOhZnKYfjVxSriWE3zi7rvr28kl7myJYcKLvWDdfkcJAxKvLNzjU_nTn5W4-/pub</string>
