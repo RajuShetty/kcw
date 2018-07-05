@@ -12,10 +12,10 @@
 
     <!-- kannadachristianwallpapersaper permission -->
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
-    <!---->
+    <!--android:name="com.kannadachristianwallpapers.app.app.MyApplication"-->
 
     <application
-        android:name="com.kannadachristianwallpapers.app.app.MyApplication"
+        android:name=".ApplicationClass"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_launcher"
